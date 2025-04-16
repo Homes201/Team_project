@@ -8,7 +8,7 @@ import pandas as pd
 
 
 def create_db_engine(**kwargs):
-    db_url = f'postgresql+psycopg2://{kwargs.get('name')}:{kwargs.get('password')}@{kwargs.get('host')}:{kwargs.get('port')}/{kwargs.get('db_name')}'
+    db_url = f"postgresql+psycopg2://{kwargs.get('name')}:{kwargs.get('password')}@{kwargs.get('host')}:{kwargs.get('port')}/{kwargs.get('db_name')}"
     engine = create_engine(db_url)
     return engine
 
