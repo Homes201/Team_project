@@ -1,118 +1,102 @@
-# 🚄BRT🚄
-<p align="center"><img src="https://github.com/user-attachments/assets/19fa9782-5046-4bb4-b383-6cf727140fb4" width="1000" height="300"/></p>
-<hr>
-
-### 🚆 팀명 : 어중이와 떠중이
- 
-### 🚅 팀원
+# 🚄 BRT: GPT 기반 신입사원 Q&A 챗봇
 
 <p align="center">
-	<img src="https://github.com/user-attachments/assets/1cd0e421-e3f6-45fa-856c-e0ae349a20be" width="163" height="163"/>
-	<img src="https://github.com/user-attachments/assets/7a392f78-9d9b-4b89-bbe8-e914160f2951" width="163" height="163"/>
-	<img src="https://github.com/user-attachments/assets/856a13c7-89e9-4b30-83ad-5560912c5ac5" width="163" height="163"/>
-	<img src="https://github.com/user-attachments/assets/4bcf5798-7ca6-4ea3-b89b-073536e13fe2" width="163" height="163"/>
-	<img src="https://github.com/user-attachments/assets/66761246-36f9-4261-a45c-02dcafd07e30" width="163" height="163"/>
-	<img src="https://github.com/user-attachments/assets/d19a1b1e-3e1d-48a7-b3a4-99fe3d9ae584" width="163" height="163"/>
+  <img src="https://github.com/user-attachments/assets/19fa9782-5046-4bb4-b383-6cf727140fb4" width="1000"/>
 </p>
 
+---
 
-|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;안준용&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;박진효&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;권오셈&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;전욱진&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;하상집&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;김현재&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
-|--------------------------|-------------------------|--------------------------|-------------------------|-------------------------|-------------------------|
+## 📌 프로젝트 개요
 
+**BRT(Bot for Railway Trainees)**는 신입사원이 복잡한 회사 규정과 정책을 빠르게 이해하고 적응할 수 있도록 돕는 **문서 기반 질의응답 챗봇**입니다.  
+GPT API, LangChain, ChromaDB를 기반으로 구축되었으며, 신뢰성 있는 정보 제공을 목표로 개발하였습니다.
 
-### 조원 역할
+---
 
-안준용 : 데이터 전처리, 백터 DB 구축, 랭체인 구축  
-박진효 : 벡터DB 구축, 랭체인 구축  
-권오셈 : 랭체인 구축, streamlit UI 개발, 깃관리  
-전욱진 : 데이터 수집, 데이터 전처리, 로고 디자인  
-하상집 : 랭체인 구축, streamlit UI 개발, 문서화 및 ReadME작성  
-김현재 : streamlit UI 개발, 문서화 및 ReadME 작성  
+## 🎯 프로젝트 목표
 
-<hr>
+- **Q&A 챗봇 개발**: 신입사원이 자주 묻는 질문에 대해 공식 문서 기반으로 답변 제공  
+- **정보 신뢰성 확보**: RAG(Retrieval Augmented Generation)를 통해 할루시네이션 최소화
 
-### 🚆 프로젝트 개요
-가상의 회사 신입사원을 위한  기업 내 정보 검색 챗봇을 구현하여 회사 내부 규정과 정책에 대한 정보를 신입사원이 쉽게 접근하고 활용할 수 있도록 합니다.
+---
 
-<hr>
+## 🧠 주요 기능
 
-### 🚅 프로젝트 목표
-신입사원 Q&A 챗봇 개발 : 회사 규정, 가이드라인, 정책 등을 기반으로 신입사원들이 자주 묻는 질문에 대해 답변해주는 Q&A 챗봇 개발하여 이를 통해 신입사원들이 복잡한 규정을 일일이 확인하지 않고 빠르게 답변을 얻을 수 있게하고, 궁금증을 해결하여 신속하게 회사에 적응하도록 돕는 것이 목표입니다.
+- PDF 문서 업로드 및 텍스트 추출  
+- GPT 기반 문서 요약 제공  
+- LangChain + VectorDB 기반 질의응답 챗봇  
+- Streamlit UI로 실시간 인터페이스 제공
 
-정보 제공 신뢰성 : AI 챗봇의 일반적인 문제인 할루시네이션(잘못된 정보 생성)을 최소화하여, 내부 공식 문서 기반 신뢰할 수 있는 답변을 제공하는 것이 목표입니다.
+---
 
+## 🔨 기술 스택
 
-
-<hr>
-
-### 🔨 기술 스택
 <div>
 <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white">
 <img src="https://img.shields.io/badge/streamlit%20-%23FF0000.svg?style=for-the-badge&logo=streamlit&logoColor=white">
 <img src="https://img.shields.io/badge/openai-0769AD?style=for-the-badge&logo=openai&logoColor=black">
 <img src="https://img.shields.io/badge/langchain-F7DF1E?style=for-the-badge&logo=langchain&logoColor=black">
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
-<img src="https://github.com/user-attachments/assets/c8cd01e7-6ce6-46db-8cc3-b13286829cf3" width="163" height="27"/>
 </div>
 
+---
 
-<hr>
+## 📁 데이터 수집 및 구성
 
-### Prerequisites
+- 실제 철도회사 문서 기반 수집 (규정/정책/가이드라인)
+- 주요 카테고리:
+  - 인사 및 근무  
+  - 복지 및 혜택  
+  - 행동 및 윤리  
+  - 교육 및 훈련  
+  - 보수 및 포상  
+  - 안전관리, 자산관리, 정보보안 등  
 
-```cmd
+---
+
+## 🧹 전처리 및 AI 파이프라인
+
+- **텍스트 정제**: 문서 내 불필요한 문구 제거 및 구조 정리  
+- **임베딩**: OpenAI Embeddings → ChromaDB 저장  
+- **RAG 체인 구성**:
+  - Retriever: Chroma  
+  - Model: GPT-4o-mini (ChatOpenAI)  
+  - 프롬프트 템플릿 + parser 체인 구성
+
+---
+
+## 🏗️ 프로젝트 구조
+
+``` python
+project/
+├── app.py # Streamlit 메인 앱
+├── chains/ # LangChain 체인 모듈
+├── utils/ # 텍스트 처리, 임베딩 유틸
+├── db/ # Chroma 벡터 저장소
+├── docs/ # 테스트용 문서 샘플
+└── README.md
+```
+
+---
+
+## ▶️ 실행 방법
+
+```bash
+# 의존성 설치
 pip install -r requirements.txt
+
+# 앱 실행
+streamlit run app.py
 ```
 
-<hr>
+---
 
-### Usage
+## 🖥️ UI 미리보기
+<img src="screenshots/ui_demo.png" width="700"/>
 
-```cmd
-streamlit run main.py
-```
+---
 
-<hr> 
-
-### Data
-기존 철도 회사의 규정, 가이드라인, 정책 문서 등으로  데이터를 수집하고 신입사원에게 필요한 문서를 선택적으로 수집하고 정리하였습니다. 데이터는 주로 다음과 같은 내용이 포함되어 있습니다.
-
-각 카테고리별 규정 문서를 신입사원이 챗봇을 통해 해당 정보를 질문하면 직접 조회 및 답변할 수 있도록 구성하였습니다.
-
-1) 인사 및 근무 규정
-2) 복지 및 혜택
-3) 행동 및 윤리
-4) 교육 및 훈련
-5) 보수 및 포상
-6) 안전 및 관리 규정
-7) 자산 및 물품 관리
-8) 정보 및 보안
-9) 사무 및 내부 통제
-10) 벤처 및 지식 재산
-
-<hr>
-
-
-### Preprocess
-
-데이터 전처리 과정은 다음과 같은 단계로 진행되었습니다.
-
-텍스트 정제 : 수집한 규정 문서에 불필요한 문구를 편집하여 정리합니다.
-
-
-임베딩 벡터화 : 각 문서를 OpenAIEmbedddings모델을 적용하여 텍스트 데이터를 벡터화하고, Chroma를 사용하여 임베딩 데이터 베이스를 생성 후 저정합니다.
-
-RAG 구축 : Chroma DB를 리트리버로 변환하여 적접한 답변을 제공할수 있도록 프롬프트 템플릿, Model(chatopenAI-gpt-4o-mini), parser를 체인을 구성하여 최적의 답변을 제공합니다.
-
-
-<hr>
-
-### System Architecture
-
-<img src="https://github.com/user-attachments/assets/be78a2ba-2d72-461f-95e7-0b95ec4a8fd1">
-<hr>
-
-### 수행 결과
+## 🧪 예시 질의응답 결과
 Q . "교육 훈련 규정문서에서 제1조에 대해 말해줘"
 
 <table>
@@ -135,16 +119,28 @@ Q . "교육 훈련 규정문서에서 제1조에 대해 말해줘"
   </tr>
 </table>
 
+---
 
+## 🧑‍🤝‍🧑 팀원 및 역할
 
-<hr>
+| 이름   | 역할                                       |
+|--------|--------------------------------------------|
+| 안준용 | 데이터 전처리, 벡터 DB 구축, LangChain 구축     |
+| 박진효 | 벡터 DB 구축, LangChain 구축                   |
+| 권오셈 | LangChain 구축, Streamlit UI, Git 관리        |
+| 전욱진 | 데이터 수집 및 전처리, 로고 디자인             |
+| 하상집 | LangChain 구축, UI 개발, 문서화               |
+| 김현재 | UI 개발, 문서화                             |
 
-### 한 줄 회고
+---
 
-***회고 작성***  
-안준용 : 어쩌다보니 팀장을 하게 되었는데 준비도 안된 팀장 따라오느라 고생하셨습니다.  
-박진효 : 프로젝트 시작 전부터 걱정이 많았는데 생각보다 복잡하지 않고 큰 문제 없이 마무리 지어서 다행입니다. 고생하신 팀원들에게 고맙다는 말을 전하고 싶습니다.  
-권오셈 : 훌륭한 분들이랑 팀플하게 되어서 배울거 많은 좋은 시간이었습니다. 고생하셨습니다.  
-전욱진 : 시간이 다소 촉박한 감이 있었는데 의욕적으로 임해주셔서 크게 문제 없이 끝나게 도와주신 팀원분들께 감사드립니다.   
-하상집 : 실제 rag 구축하는 과정에서 어려움이 있었지만, 각자 맡은 바 잘 하셔서 의미 있는 시간이었습니다. 고생하셨습니다.  
-김현재 : 옆에서 서포트하면서 많이 배웠습니다. 다들 고생하셨습니다.  
+## 🧾 한 줄 회고
+
+| 이름   | 회고                                                     |
+|--------|----------------------------------------------------------|
+| 안준용 | 어쩌다보니 팀장을 하게 되었는데, 팀원들 따라와줘서 고맙습니다.     |
+| 박진효 | 처음엔 걱정됐지만 큰 문제 없이 마무리되어 다행입니다.             |
+| 권오셈 | 함께한 시간이 값졌고 많이 배웠습니다.                        |
+| 전욱진 | 시간이 촉박했지만 잘 마무리되어 감사드립니다.                   |
+| 하상집 | 어려움 있었지만 협력으로 극복해서 좋았습니다.                 |
+| 김현재 | 서포트하며 많이 배웠습니다. 고생 많으셨습니다.                 |
